@@ -24,10 +24,24 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.application.Application;
 
-
+/**
+ * App Class
+ *
+ * Calls all methods to run program.
+ *
+ * @author Braxton Soto
+ */
 public class App extends Application{
     List<Student> studentList = new ArrayList<>();
     @Override
+    /**
+     * <p>start description
+     * JavaFx Implementation
+     * </p>>
+     * @param primaryStage Stage object
+     * @return void
+     *
+     */
     public void start(Stage primaryStage) throws IOException {
         IOManager.writeData();
         primaryStage.setTitle("Course View");
@@ -105,6 +119,15 @@ public class App extends Application{
            }
        });
     }
+
+    /**
+     * <p> main method description
+     *   Launches JavaFx
+     * </p>
+     * @param args
+     * @throws IOException
+     * @return void
+     */
     public static void main(String[] args) throws IOException {
     Application.launch(args);
     }

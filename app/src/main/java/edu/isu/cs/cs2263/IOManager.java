@@ -9,10 +9,22 @@ import com.google.gson.Gson;
 import java.io.*;
 import com.google.gson.GsonBuilder;
 
-
+/**
+ * IOManager Class
+ *
+ * Writes and reads a list of students
+ */
 public class IOManager {
 
-
+    /**
+     * <p> writeData method description
+     * Initializes Student and Course objects.
+     * Writes them to Json file
+     *
+     * </p>
+     * @throws IOException
+     * @return void
+     */
     public static void writeData() throws IOException {
 
         Course course1 = new Course();
@@ -65,6 +77,14 @@ public class IOManager {
         fileWriter.close();
         System.out.println("JSON wrote to file");
     }
+
+    /**
+     * <p> readData method description
+     *     Reads in data from a JSON txt file and converts to string array list
+     * </p>
+     * @return ArrayList<String>
+     * @throws FileNotFoundException
+     */
     public static List<Student> readData() throws FileNotFoundException {
         Gson gson = new Gson();
         List<Student> studentList = new ArrayList<>();
